@@ -1,0 +1,63 @@
+// ------------------------------------------
+// iconfont
+// ------------------------------------------
+
+//定义icon相关变量
+$icon-cls:				#{$conf-nsp-ele}icon; //通用类名
+
+@mixin import-ui-icon {
+
+//--------------------- 定义 ---------------------//
+@font-face {font-family: "iconfont";
+	src: url('iconfont.eot?t=1509867183345'); /* IE9*/
+	src: url('iconfont.eot?t=1509867183345#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	url('data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAVkAAsAAAAAB/QAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAARAAAAFZW7kg5Y21hcAAAAYAAAABeAAABhpp0Br5nbHlmAAAB4AAAAZUAAAHc1tvaBWhlYWQAAAN4AAAALwAAADYPaQNUaGhlYQAAA6gAAAAcAAAAJAfeA4RobXR4AAADxAAAAAwAAAAMC+kAAGxvY2EAAAPQAAAACAAAAAgAdgDubWF4cAAAA9gAAAAfAAAAIAESAGNuYW1lAAAD+AAAAUUAAAJtPlT+fXBvc3QAAAVAAAAAJAAAADXX5FB7eJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2Bk/sE4gYGVgYOpk+kMAwNDP4RmfM1gxMjBwMDEwMrMgBUEpLmmMDgwVDzzZ27438AQw9zA0AAUZgTJAQApOQy7eJzFkMENgDAMAy9t6QMxCA926ZcXc3TirlFMKA8mqCXHimMpUYAFiOIhJrAL48Ep19yPrO4nz2SpEait9K7+U0U0y65BJTMNNm/1H5vXfXT6CnVQJ7byknADGbYMywAAeJxVT7Fu1EAQ3VnHuzvJrQ+v1/bdXi53tsmZJGDJPp8pEJeGhogCKVKk0NEhJGjTUKRBoqBAokhqFCV/QJXPQNQg6KjTUCzYQULK6OnNexpp5g1xCfnz3bl0BiQgd0hJHpGnhADbgdSjY0jyuqA7ECZuGGvPybM84VlaOA8hTpmOqqaexYyzPniwAfOkavKC5rCol/QBVNEYYDgy+2pzXTkfYHWQb7y1e/QThJNsvb+8Zx/f3dXVNBBHPaWGSr0XzHUFpSt9D17FEbq4yuyZ2zfh5WSLTqA3zM2TQzkdqefv6tfjzRgBjo8hGE29i13f+C3emChQQ35LioGR2W0NRz/XBkFvPPtB2nI7or/pRyLJiGyR++Sg/TVJZ3XTZo80y8o8K6BuuvCa8dLx66aKQl+zdLYo5zeccy2j7unF/wFPCujcvKS/7DZDZPC149NzLgS/phPsYYuX/9oXhr4EKn2UwgT2W2AEpwuU2GIJwkP0BNgXsMYRub3qFtzQ28jsZ6mUhL3ujj3XBsBoeMaQ/AUuUUZfAAAAeJxjYGRgYADir8/3tMfz23xl4GZhAIFrKvfXI+j/D1kYmCWAXA4GJpAoAGmnC+kAeJxjYGRgYG7438AQw8IAAkCSkQEVMAMARwkCbAQAAAAD6QAABAAAAAAAAAAAdgDueJxjYGRgYGBmCGdgZQABJiDmAkIGhv9gPgMAEY0BdgB4nGWPTU7DMBCFX/oHpBKqqGCH5AViASj9EatuWFRq911036ZOmyqJI8et1ANwHo7ACTgC3IA78EgnmzaWx9+8eWNPANzgBx6O3y33kT1cMjtyDRe4F65TfxBukF+Em2jjVbhF/U3YxzOmwm10YXmD17hi9oR3YQ8dfAjXcI1P4Tr1L+EG+Vu4iTv8CrfQ8erCPuZeV7iNRy/2x1YvnF6p5UHFockikzm/gple75KFrdLqnGtbxCZTg6BfSVOdaVvdU+zXQ+ciFVmTqgmrOkmMyq3Z6tAFG+fyUa8XiR6EJuVYY/62xgKOcQWFJQ6MMUIYZIjK6Og7VWb0r7FDwl57Vj3N53RbFNT/c4UBAvTPXFO6stJ5Ok+BPV8bUnV0K27LnpQ0kV7NSRKyQl7WtlRC6gE2ZVeOEXpc0Yk/KGdI/wAJWm7IAAAAeJxjYGKAAC4G7ICZkYmRmZGFgbGCvTgjMS85o5SBAQAaPgOG') format('woff'),
+	url('iconfont.ttf?t=1509867183345') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+	url('iconfont.svg?t=1509867183345#iconfont') format('svg'); /* iOS 4.1- */
+  }
+  
+  .iconfont {
+	font-family:"iconfont" !important;
+	font-size:16px;
+	font-style:normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  }
+
+//--------------------- 通用样式（固定样式） ---------------------//
+.#{$icon-cls},
+%#{$icon-cls} {
+	display: inline-block;
+	vertical-align: baseline;
+	@extend %iconfont;
+
+	&-down:before { content: "\e654"; }
+
+	&-plus:before { content: "\e61e"; }
+	
+	&-minus:before { content: "\e6fe"; }
+	
+	&-delete:before { content: "\e86e"; }
+	
+	&-search:before { content: "\e870"; }
+	
+	&-ok:before { content: "\e8c5"; }
+	
+	&-up:before { content: "\e8c6"; }
+	
+	&-right:before { content: "\e8c7"; }
+	
+	&-left:before { content: "\e8c8"; }
+
+	&-refresh:before { content: "\e6aa"; }
+	&-filter:before { content: "\e6f1"; }
+	&-user:before { content: "\e726"; }
+	&-lock:before { content: "\e669"; }
+	&-home:before { content: "\e6cb"; }
+	&-share:before { content: "\e871"; }
+	&-koubacktopling:before { content: "\e892"; }
+	&-trash:before { content: "\e8c1"; }
+	&-password:before { content: "\e8e0"; }
+}
+
+}
